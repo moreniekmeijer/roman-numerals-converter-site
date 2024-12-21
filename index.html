@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman numerals converter</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="scripts/roman-to-int.js"></script>
+    <script src="scripts/int-to-roman.js"></script>
+</head>
+<body>
+<header>
+    <h1>Roman Numerals Converter</h1>
+    <p>Type in a (decimal) number or a Roman numeral below to convert.</p>
+</header>
+<main>
+    <section>
+        <label for="romanInput">Enter Roman Numeral:</label>
+        <input type="text" id="romanInput" placeholder="e.g., MMXXIV">
+        <button onclick="convertRomanNumber()">Convert</button>
+        <br><br>
+        <label for="intResult">Converted Integer:</label>
+        <input type="text" id="intResult" readonly>
+    </section>
+    <section>
+        <label for="decimalInput">Enter (decimal) number:</label>
+        <input type="text" id="decimalInput" placeholder="e.g., 2024">
+        <button onclick="convertDecimalNumber()">Convert</button>
+        <br><br>
+        <label for="romanResult">Converted Integer:</label>
+        <input type="text" id="romanResult" readonly>
+    </section>
+</main>
+</body>
+</html>
