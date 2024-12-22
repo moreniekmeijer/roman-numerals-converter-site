@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roman numerals converter</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="scripts/roman-to-int.js"></script>
-    <script src="scripts/int-to-roman.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
     <h1>Roman Numerals Converter</h1>
-    <p>Type in a (decimal) number or a Roman numeral below to convert.</p>
+    <p>Type in a Roman numeral or a (decimal) number below to convert.</p>
+    <p>It converts from 1 till 100000 both ways.</p>
 </header>
 <main>
     <section>
-        <label for="romanInput">Enter Roman Numeral:</label>
-        <input type="text" id="romanInput" placeholder="e.g., MMXXIV">
+        <label for="romanInput">Enter a Roman Numeral:</label>
+        <input type="text" id="romanInput" maxlength="100" placeholder="e.g., MMXXIV"/>
         <button onclick="convertRomanNumber()">Convert</button>
         <br><br>
-        <label for="intResult">Converted Integer:</label>
-        <input type="text" id="intResult" readonly>
+        <label for="intResult">Converted numeral:</label>
+        <input type="number" id="intResult" size="30" readonly/>
+        <script src="scripts/roman-to-int.js"></script>
     </section>
     <section>
-        <label for="decimalInput">Enter (decimal) number:</label>
-        <input type="text" id="decimalInput" placeholder="e.g., 2024">
+        <label for="decimalInput">Enter a (decimal) number:</label>
+        <input type="number" id="decimalInput" min="1" step="1" max="100000" placeholder="e.g., 2024"/>
         <button onclick="convertDecimalNumber()">Convert</button>
         <br><br>
-        <label for="romanResult">Converted Integer:</label>
-        <input type="text" id="romanResult" readonly>
+        <label for="romanResult">Converted number:</label>
+        <input type="text" id="romanResult" readonly/>
+        <script src="scripts/int-to-roman.js"></script>
     </section>
 </main>
 </body>
